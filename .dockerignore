@@ -1,0 +1,7 @@
+.git
+.vscode
+.github
+logs
+*.md
+public/img
+*.local
