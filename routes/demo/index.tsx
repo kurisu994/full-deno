@@ -1,25 +1,40 @@
 import { useSignal } from "@preact/signals";
-import Counter from "@/islands/Counter.tsx";
 import LemonDrop from "@/islands/LemonDrop.tsx";
+import Search from "@/islands/Search.tsx";
+import Info from "@/islands/Info.tsx";
 
 export default function Home() {
+  const result = useSignal([
+    "What are you waiting for? Search now 🦕",
+  ]);
   const count = useSignal(0);
   return (
-    <div class="mx-auto  bg-green-300 h-svh">
-      <div
-        class="w-full flex justify-center items-center flex-col"
-        aria-hidden="true"
-      >
-        <LemonDrop />
+    <>
+      <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="styles/kbtn-style.css" />
+      </head>
+      <div class="mx-auto bg-green-400 h-svh min-w-[320px] flex">
+        <div
+          class="w-full min-w-[320px] flex justify-center items-center flex-col fixed z-0"
+          aria-hidden="true"
+        >
+          <LemonDrop />
+        </div>
+
+        <div className="flex-1 flex flex-col max-w-screen-xl mx-auto">
+          <div className="relative pt-[15vh]">
+            <p class="text-3xl text-center mb-4">
+              测试包查询
+            </p>
+            <Search />
+          </div>
+          <div class="relative flex flex-col flex-1 items-center pt-5 mx-auto w-4/6 md:w-1/2">
+            {result.value.map((name) => <Info name={name} />)}
+          </div>
+        </div>
       </div>
-      <div class="mt-16 max-w-screen-md mx-auto flex flex-col items-center justify-center">
-        <h1 class="text-4xl font-bold">Welcome to Fresh</h1>
-        <p class="my-4">
-          Try updating this message in the
-          <code class="mx-2">./routes/demo/index.tsx</code> file, and refresh.
-        </p>
-        <Counter count={count} />
-      </div>
-    </div>
+    </>
   );
 }

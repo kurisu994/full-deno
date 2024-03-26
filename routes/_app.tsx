@@ -5,7 +5,7 @@ export default function App({ Component }: PageProps) {
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>App下载器</title>
+        <title>未来道具研究所</title>
         <link rel="stylesheet" href="/styles.css" />
       </head>
       <body>
