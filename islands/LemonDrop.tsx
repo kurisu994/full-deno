@@ -129,7 +129,6 @@ function LemonDrop() {
         height="100px"
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
-        class="-mt-5"
       >
         <polygon
           points={springsPath}
