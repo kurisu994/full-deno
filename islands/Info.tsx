@@ -21,7 +21,7 @@ const Info = ({ name }: InfoProps) => {
   };
 
   return (
-    <div class="select-none mb-6 shadow-md bg-neutral-200 border rounded-md border-transparent w-full p-4 duration-300 hover:shadow-lg focus:shadow-lg focus:outline-none flex md:flex-row flex-col">
+    <div class="snap-start select-none mb-6 shadow-md bg-neutral-200 border rounded-md border-transparent w-full p-4 duration-300 hover:shadow-lg focus:shadow-lg focus:outline-none flex md:flex-row flex-col">
       <div class="w-full">
         <p class="font-bold text-lg">{name}</p>
         <p class="text-base mt-2">大小：147MB</p>

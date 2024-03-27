@@ -2,6 +2,7 @@ import { useSignal } from "@preact/signals";
 import LemonDrop from "@/islands/LemonDrop.tsx";
 import Search from "@/islands/Search.tsx";
 import Info from "@/islands/Info.tsx";
+import { IS_BROWSER } from "$fresh/runtime.ts";
 
 export default function Home() {
   const result = useSignal([
@@ -41,7 +42,7 @@ export default function Home() {
             </p>
             <Search />
           </div>
-          <div class="relative overflow-y-scroll flex flex-col flex-1 items-center mt-5 mb-[75px] mx-auto w-4/5 sm:w-4/6 md:w-1/2">
+          <div class="relative overflow-y-auto scroll-smooth snap-y scrollbar-hide flex flex-col flex-1 items-center mt-5 mb-[75px] mx-auto w-4/5 sm:w-4/6 md:w-1/2">
             {result.value.map((name) => <Info key={name} name={name} />)}
           </div>
         </div>
