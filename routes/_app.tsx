@@ -1,11 +1,9 @@
 import { type PageProps } from "$fresh/server.ts";
 import dayjs from "dayjs";
-import relativeTime from "dayjs/relativeTime";
 import "dayjs/zhCN";
 
 export default function App({ Component }: PageProps) {
   dayjs.locale("zh-cn");
-  dayjs.extend(relativeTime);
   return (
     <html>
       <head>

@@ -1,13 +1,15 @@
 import { useEffect, useState } from "preact/hooks";
 import { IconDownload } from "@tabler/icons-preact";
 import dayjs from "dayjs";
-
+import relativeTime from "dayjs/relativeTime";
 
 interface InfoProps {
   name: string;
 }
 
 const Info = ({ name }: InfoProps) => {
+  dayjs.extend(relativeTime);
+
   const [bookmarked, setBookmarked] = useState(false);
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem(name)!);
@@ -35,12 +37,12 @@ const Info = ({ name }: InfoProps) => {
         </p>
       </div>
       <div class="flex items-center justify-end">
-        <IconDownload
-          stroke={2}
-          size={32}
-          className="cursor-pointer"
-          onClick={() => console.info("xx")}
-        />
+        <a>
+          <IconDownload
+            stroke={2}
+            size={32}
+          />
+        </a>
       </div>
     </div>
   );

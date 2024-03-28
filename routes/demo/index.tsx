@@ -2,7 +2,6 @@ import { useSignal } from "@preact/signals";
 import LemonDrop from "@/islands/LemonDrop.tsx";
 import Search from "@/islands/Search.tsx";
 import Info from "@/islands/Info.tsx";
-import { IS_BROWSER } from "$fresh/runtime.ts";
 
 export default function Home() {
   const result = useSignal([
