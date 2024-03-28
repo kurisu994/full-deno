@@ -5,10 +5,10 @@
 import * as $_404 from "./routes/_404.tsx";
 import * as $_500 from "./routes/_500.tsx";
 import * as $_app from "./routes/_app.tsx";
-import * as $api_joke from "./routes/api/joke.ts";
-import * as $demo_index from "./routes/demo/index.tsx";
+import * as $api_apk_kw_ from "./routes/api/apk/[kw].ts";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
+import * as $patchouli_index from "./routes/patchouli/index.tsx";
 import * as $Counter from "./islands/Counter.tsx";
 import * as $Info from "./islands/Info.tsx";
 import * as $LemonDrop from "./islands/LemonDrop.tsx";
@@ -20,10 +20,10 @@ const manifest = {
     "./routes/_404.tsx": $_404,
     "./routes/_500.tsx": $_500,
     "./routes/_app.tsx": $_app,
-    "./routes/api/joke.ts": $api_joke,
-    "./routes/demo/index.tsx": $demo_index,
+    "./routes/api/apk/[kw].ts": $api_apk_kw_,
     "./routes/greet/[name].tsx": $greet_name_,
     "./routes/index.tsx": $index,
+    "./routes/patchouli/index.tsx": $patchouli_index,
   },
   islands: {
     "./islands/Counter.tsx": $Counter,
