@@ -21,6 +21,15 @@ export async function init(): Promise<void> {
       (col) => col.defaultTo(sql`CURRENT_TIMESTAMP`),
     )
     .execute();
+    console.info(`
+    ##    ## ##     ## ########  ####  ######  ##     ## 
+    ##   ##  ##     ## ##     ##  ##  ##    ## ##     ## 
+    ##  ##   ##     ## ##     ##  ##  ##       ##     ## 
+    #####    ##     ## ########   ##   ######  ##     ## 
+    ##  ##   ##     ## ##   ##    ##        ## ##     ## 
+    ##   ##  ##     ## ##    ##   ##  ##    ## ##     ## 
+    ##    ##  #######  ##     ## ####  ######   #######  
+    `)
     console.info('check db over!')
 }
 
