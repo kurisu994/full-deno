@@ -1,9 +1,11 @@
 import { Db } from "./db.ts";
+import { fileSize } from "@/utils/helper.ts";
+import { getFileURL } from "@/utils/helper.ts";
 
 export type ApkInfoRow = {
   id: number;
   appName: string;
-  appSize: number;
+  appSize: string;
   md5: string;
   downUrl: string;
   uploadAt: Date;
@@ -25,7 +27,7 @@ export async function queryByKw(kw = "", limit = 10) {
     list = results.map((p) => ({
       id: p.id,
       appName: p.app_name,
-      appSize: p.app_size,
+      appSize: fileSize(p.app_size),
       md5: p.md5,
       downUrl: p.down_url,
       uploadAt: p.upload_at,
@@ -37,9 +39,9 @@ export async function queryByKw(kw = "", limit = 10) {
 export type IApk =
   & Pick<
     ApkInfoRow,
-    "appName" | "appSize" | "md5"
+    "appName" | "md5"
   >
-  & { fid: string };
+  & { fid: string; appSize: number };
 
 export async function saveData(data: IApk): Promise<string> {
   const db = Db.getInstance();
@@ -64,7 +66,7 @@ export async function saveData(data: IApk): Promise<string> {
       app_size: data.appSize,
       md5: data.md5,
       fid: data.fid,
-      down_url: `https://testgate.feewee.cn/file/show?fid=${data.fid}`,
+      down_url: getFileURL(data.fid),
     })
     .executeTakeFirstOrThrow();
 
