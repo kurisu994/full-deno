@@ -1,4 +1,3 @@
-import { IconDownload } from "@tabler/icons-preact";
 import dayjs from "dayjs";
 import { ApkInfoRow } from "@/utils/apkdao.ts";
 import { Signal } from "@preact/signals";
@@ -26,9 +25,10 @@ const Info = ({ datalist }: InfoProps) => {
           </div>
           <div class="flex items-center justify-end">
             <a href={item.downUrl} target="_blank" rel="noreferrer">
-              <IconDownload
-                stroke={2}
-                size={32}
+              <img
+                src="/img/download.png"
+                class="w-8 md:w-10"
+                alt="下载"
               />
             </a>
           </div>

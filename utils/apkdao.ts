@@ -67,6 +67,7 @@ export async function saveData(data: IApk): Promise<string> {
       md5: data.md5,
       fid: data.fid,
       down_url: getFileURL(data.fid),
+      upload_at: Date(),
     })
     .executeTakeFirstOrThrow();
 

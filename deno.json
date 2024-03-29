@@ -30,7 +30,6 @@
     "tailwindcss": "npm:tailwindcss@3.4.1",
     "tailwindcss/": "npm:/tailwindcss@3.4.1/",
     "tailwindcss/plugin": "npm:/tailwindcss@3.4.1/plugin.js",
-    "@tabler/icons-preact": "npm:@tabler/icons-preact",
     "$std/": "https://deno.land/std@0.211.0/"
   },
   "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" },
