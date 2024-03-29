@@ -3,7 +3,7 @@ import LemonDrop from "@/islands/LemonDrop.tsx";
 import Search from "@/islands/Search.tsx";
 import Info from "@/islands/Info.tsx";
 import { Handlers, PageProps } from "$fresh/server.ts";
-import { ApkInfoRow, queryByKw } from "@/utils/apkquery.ts";
+import { ApkInfoRow, queryByKw } from "@/utils/apkdao.ts";
 
 export const handler: Handlers<ApkInfoRow[] | null> = {
   async GET(_, ctx) {
@@ -18,6 +18,7 @@ export default function Home(
 ) {
   const kw = url.searchParams.get("kw");
   const appList = useSignal(data);
+
   return (
     <>
       <head>
@@ -38,11 +39,9 @@ export default function Home(
             <p class="text-3xl text-center mb-4">
               测试包查询
             </p>
-            <Search value={kw} />
+            <Search value={kw} datalist={appList} />
           </div>
-          <div class="relative overflow-y-auto scroll-smooth snap-y scrollbar-hide flex flex-col flex-1 items-center mt-5 mb-[75px] mx-auto w-4/5 sm:w-4/6 md:w-1/2">
-            {appList.value?.map((apk) => <Info key={apk.id} item={apk} />)}
-          </div>
+          <Info datalist={appList} />
         </div>
       </div>
     </>

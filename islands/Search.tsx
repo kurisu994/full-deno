@@ -1,17 +1,33 @@
-import { useEffect, useState } from "preact/hooks";
+import { Signal } from "@preact/signals";
+import { useState } from "preact/hooks";
+import { ApkInfoRow } from "@/utils/apkdao.ts";
+import { IS_BROWSER } from "$fresh/runtime.ts";
 
 interface Props {
   value?: string | null;
+  datalist: Signal<ApkInfoRow[] | null>;
 }
 
-const Search = ({ value }: Props) => {
+const Search = ({ value, datalist }: Props) => {
   const [query, setQuery] = useState(value);
 
-  useEffect(() => {
-  }, []);
+  async function handleSearch(kw: string) {
+    try {
+      const res = await fetch(`/api/apk/${kw}`);
+      const data: ApkInfoRow[] = await res.json();
+      datalist.value = data;
+    } catch (e) {
+      alert(`错误：${e.message}`);
+    }
+  }
 
   const search = () => {
-    history.replaceState(null, "", `?kw=${query}`);
+    if (query) {
+      history.replaceState(null, "", `?kw=${query}`);
+      handleSearch(query);
+    } else {
+      location.replace("/patchouli");
+    }
   };
 
   const handleKeyPress = (e: KeyboardEvent) => {
@@ -34,6 +50,7 @@ const Search = ({ value }: Props) => {
         <button
           onClick={search}
           className="custom-btn kbtn ml-4"
+          disabled={!IS_BROWSER}
         >
           <span>搜索</span>
         </button>

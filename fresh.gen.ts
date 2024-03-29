@@ -6,6 +6,7 @@ import * as $_404 from "./routes/_404.tsx";
 import * as $_500 from "./routes/_500.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $api_apk_kw_ from "./routes/api/apk/[kw].ts";
+import * as $api_apk_create from "./routes/api/apk/create.ts";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
 import * as $patchouli_index from "./routes/patchouli/index.tsx";
@@ -21,6 +22,7 @@ const manifest = {
     "./routes/_500.tsx": $_500,
     "./routes/_app.tsx": $_app,
     "./routes/api/apk/[kw].ts": $api_apk_kw_,
+    "./routes/api/apk/create.ts": $api_apk_create,
     "./routes/greet/[name].tsx": $greet_name_,
     "./routes/index.tsx": $index,
     "./routes/patchouli/index.tsx": $patchouli_index,
