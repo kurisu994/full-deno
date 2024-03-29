@@ -8,13 +8,13 @@ export const handler: Handlers<string | null> = {
       validateParams(data);
       const res = await saveData(data);
       return Promise.resolve(
-        new Response(JSON.stringify(res), {
+        new Response(JSON.stringify({ success: true, data: res }), {
           headers: { "Content-Type": "application/json" },
         }),
       );
     } catch (e) {
       return Promise.resolve(
-        new Response(JSON.stringify(e.message), {
+        new Response(JSON.stringify({ success: false, message: e.message }), {
           headers: { "Content-Type": "application/json" },
           status: 500,
           statusText: "Internal Server Error",
