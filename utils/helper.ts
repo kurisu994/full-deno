@@ -11,7 +11,7 @@ export const SIZE_UNIT = { kb, mb, gb, tb };
  * @param {number} length 文件字节长度
  */
 export function fileSize(length: number) {
-  if (typeof length === 'number' && !isNaN(length)) {
+  if (typeof length === 'number' && isNaN(length)) {
     return '-';
   }
   if (length > SIZE_UNIT.tb) {
