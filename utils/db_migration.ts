@@ -4,7 +4,7 @@ import { Db, DbSchema } from "@/utils/db.ts";
 const TABLE_NAME = "apk_info";
 
 export async function init(): Promise<void> {
-  console.info('starting check db')
+  console.info('  starting check db')
   const db = Db.getInstance();
   await db.schema
     .createTable(TABLE_NAME)
@@ -22,18 +22,18 @@ export async function init(): Promise<void> {
     )
     .execute();
     console.info(`
-    ##    ## ##     ## ########  ####  ######  ##     ## 
-    ##   ##  ##     ## ##     ##  ##  ##    ## ##     ## 
-    ##  ##   ##     ## ##     ##  ##  ##       ##     ## 
-    #####    ##     ## ########   ##   ######  ##     ## 
-    ##  ##   ##     ## ##   ##    ##        ## ##     ## 
-    ##   ##  ##     ## ##    ##   ##  ##    ## ##     ## 
-    ##    ##  #######  ##     ## ####  ######   #######  
+      ##    ## ##     ## ########  ####  ######  ##     ## 
+      ##   ##  ##     ## ##     ##  ##  ##    ## ##     ## 
+      ##  ##   ##     ## ##     ##  ##  ##       ##     ## 
+      #####    ##     ## ########   ##   ######  ##     ## 
+      ##  ##   ##     ## ##   ##    ##        ## ##     ## 
+      ##   ##  ##     ## ##    ##   ##  ##    ## ##     ## 
+      ##    ##  #######  ##     ## ####  ######   #######  
     `)
-    console.info('check db over!')
+    console.info('  check db over!')
 }
 
-async function up(db: Kysely<DbSchema>): Promise<void> {
+async function up(_db: Kysely<DbSchema>): Promise<void> {
 }
 
 async function down(db: Kysely<DbSchema>): Promise<void> {
