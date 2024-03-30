@@ -3,7 +3,7 @@ FROM denoland/deno:alpine-1.41.3
 ARG GIT_REVISION
 ENV DENO_DEPLOYMENT_ID=${GIT_REVISION}
 # 设置npm镜像仓库
-ENV NPM_CONFIG_REGISTRY=https://registry.npmmirror.com
+# ENV NPM_CONFIG_REGISTRY=https://registry.npmmirror.com
 ENV TZ=Asia/Shanghai
 
 WORKDIR /app

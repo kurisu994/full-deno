@@ -16,5 +16,8 @@
   },
   "css.customData": [
     ".vscode/tailwind.json"
-  ]
+  ],
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  }
 }
