@@ -4,10 +4,10 @@ domainName="app-loader"
 
 git pull --rebase
 
-docker images | grep ${fileName} &> /dev/null
+docker images | grep ${domainName} &> /dev/null
 if [ $? -eq 0 ]
 then
-    docker tag ${fileName}:latest pre/${fileName}:pre
+    docker tag ${domainName}:latest pre/${domainName}:pre
 fi
 
-docker build -t ${fileName}:latest -f ./Dockerfile .
+docker build -t ${domainName}:latest -f ./Dockerfile .

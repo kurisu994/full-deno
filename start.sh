@@ -19,7 +19,7 @@ docker run -d -ti --name ${domainName} \
   -e TZ=Asia/Shanghai \
   ${domainName}:latest
 
-docker images | grep pre/${fileName} &>/dev/null
+docker images | grep pre/${domainName} &>/dev/null
 if [ $? -eq 0 ]; then
-  docker rmi pre/${fileName}:pre
+  docker rmi pre/${domainName}:pre
 fi
