@@ -34,5 +34,5 @@ export function getFileURL(fid: string) {
   if (!!fid && (fid.includes('file:') || fid.includes('content:') || fid.includes('http:') || fid.includes('https:'))) {
     return fid;
   }
-  return `https://testgate.feewee.cn/file/show?fid=${fid}`;
+  return `https://gate.feewee.cn/file/show?fid=${fid}`;
 }

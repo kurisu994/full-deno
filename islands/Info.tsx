@@ -12,7 +12,7 @@ const Info = ({ datalist }: InfoProps) => {
       {datalist.value?.map?.((item) => (
         <div class="snap-start select-none mb-6 shadow-md bg-neutral-200 border rounded-md border-transparent w-full p-4 duration-300 hover:shadow-lg focus:shadow-lg focus:outline-none flex md:flex-row flex-col">
           <div class="w-full">
-            <p class="font-bold text-lg">{`No.${item.id} ${item.appName}`}</p>
+            <p class="font-bold text-lg">{item.appName}</p>
             <p class="text-base mt-2">大小：{item.appSize}</p>
             <p class="text-base mt-2">
               md5：<span class="font-mono select-text bg-blue-200 rounded py-px px-[5px]">

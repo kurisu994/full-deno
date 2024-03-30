@@ -4,12 +4,12 @@ import { Db } from "@/utils/db.ts";
 export const handler: Handlers<string | null> = {
   async POST(_req, ctx) {
     try {
-      const id = Number(ctx.url.searchParams.get("id") ?? 0);
-      if (isNaN(id) || id <= 0) {
-        throw Error("invalid id");
+      const md5 = ctx.url.searchParams.get("md5") ?? '';
+      if (!md5) {
+        throw Error("invalid md5");
       }
       const db = Db.getInstance();
-      await db.deleteFrom("apk_info").where("id", "=", id).execute();
+      await db.deleteFrom("apk_info").where("md5", "=", md5).execute();
       return Promise.resolve(
         new Response(JSON.stringify({ success: true, message: "ok" }), {
           headers: { "Content-Type": "application/json" },
