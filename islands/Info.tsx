@@ -15,7 +15,7 @@ const Info = ({ datalist }: InfoProps) => {
             <p class="font-bold text-lg">{item.appName}</p>
             <p class="text-base mt-2">大小：{item.appSize}</p>
             <p class="text-base mt-2">
-              md5：<span class="font-mono select-text bg-blue-200 rounded py-px px-[5px]">
+              md5：<span class="font-mono select-text bg-blue-200 rounded py-px px-[5px] break-all">
                 {item.md5}
               </span>
             </p>
