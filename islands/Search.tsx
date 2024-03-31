@@ -26,7 +26,7 @@ const Search = ({ value, datalist }: Props) => {
       history.replaceState(null, "", `?kw=${query}`);
       handleSearch(query);
     } else {
-      location.replace("/patchouli");
+      location.replace("/");
     }
   };
 
