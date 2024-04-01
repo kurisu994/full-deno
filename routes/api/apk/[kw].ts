@@ -1,5 +1,5 @@
 import { Handlers } from "$fresh/server.ts";
-import { queryByKw, ApkInfoRow } from "@/utils/apkdao.ts";
+import { ApkInfoRow, queryByKw } from "@/utils/apkdao.ts";
 
 export const handler: Handlers<ApkInfoRow[] | null> = {
   async GET(_req, ctx) {

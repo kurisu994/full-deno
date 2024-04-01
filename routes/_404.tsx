@@ -17,7 +17,7 @@ export default function Error404() {
           />
           <h1 class="text-4xl font-bold">404 - Page not found</h1>
           <p class="my-4">
-          Sorry, the page you visited does not exist.
+            Sorry, the page you visited does not exist.
           </p>
           <a href="/" class="underline">Go back home</a>
         </div>

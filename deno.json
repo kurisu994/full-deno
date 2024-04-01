@@ -7,8 +7,8 @@
     "dev": "PORT=9000 deno run -A --watch=static/,routes/ dev.ts",
     "build": "deno run -A dev.ts build",
     "start": "deno run -A main.ts",
+    "format": "deno fmt",
     "update": "deno run -A -r https://fresh.deno.dev/update .",
-    "preview": "deno run -A main.ts",
     "migrate": "deno run -A utils/db_migration.ts",
     "migrate_up": "deno run -A utils/db_migration.ts --up",
     "migrate_down": "deno run -A utils/db_migration.ts --down"

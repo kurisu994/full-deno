@@ -53,7 +53,10 @@ class SqliteConnection implements DatabaseConnection {
   constructor(db: SqliteDatabase) {
     this.#db = db;
   }
-  streamQuery<R>(compiledQuery: CompiledQuery<unknown>, chunkSize?: number | undefined): AsyncIterableIterator<QueryResult<R>> {
+  streamQuery<R>(
+    _compiledQuery: CompiledQuery<unknown>,
+    _chunkSize?: number | undefined,
+  ): AsyncIterableIterator<QueryResult<R>> {
     throw new Error("Method not implemented.");
   }
 

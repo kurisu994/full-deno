@@ -1,4 +1,3 @@
-
 export default function Home() {
   return (
     <div class="mx-auto h-svh">

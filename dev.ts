@@ -18,7 +18,7 @@ await dev(import.meta.url, "./main.ts", {
         emptyDirSync(DB_DIR);
       }
       await init();
-      console.info("")
+      console.info("");
       console.info(`    Local: http://${params.hostname}:${params.port}`);
     },
   },

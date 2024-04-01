@@ -1,4 +1,5 @@
 type DrainOuterGeneric<T> = [T] extends [unknown] ? T : never;
+// deno-lint-ignore no-explicit-any
 type ShallowRecord<K extends keyof any, T> = DrainOuterGeneric<
   {
     [P in K]: T;
@@ -48,6 +49,7 @@ export function isBuffer(obj: unknown): obj is { length: number } {
   return typeof Buffer !== "undefined" && Buffer.isBuffer(obj);
 }
 
+// deno-lint-ignore ban-types
 export function isFunction(obj: unknown): obj is Function {
   return typeof obj === "function";
 }
@@ -105,5 +107,3 @@ export function isReadonlyArray(arg: unknown): arg is ReadonlyArray<unknown> {
 export function noop<T>(obj: T): T {
   return obj;
 }
-
-
