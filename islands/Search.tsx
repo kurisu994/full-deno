@@ -41,7 +41,7 @@ const Search = ({ value, datalist }: Props) => {
       <div class="flex items-center w-full mt-4">
         <input
           type="text"
-          placeholder="输入关键字"
+          placeholder="输入打包日期 e.g: mmddHHmm"
           value={query ? query : ""}
           onChange={(e) => setQuery((e.target as HTMLInputElement).value)}
           onKeyPress={(e) => handleKeyPress(e)}
