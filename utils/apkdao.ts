@@ -16,7 +16,6 @@ export async function queryByKw(kw = "", limit = 10) {
   const results = await db.selectFrom("apk_info").selectAll()
     .where((eb) =>
       eb.or([
-        eb("fid", "=", kw),
         eb("app_name", "like", `%${kw}%`),
       ])
     ).orderBy("upload_at asc")
