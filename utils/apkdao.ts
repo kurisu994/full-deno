@@ -19,7 +19,7 @@ export async function queryByKw(kw = "", limit = 10) {
         eb("fid", "=", kw),
         eb("app_name", "like", `%${kw}%`),
       ])
-    ).orderBy("upload_at desc")
+    ).orderBy("upload_at asc")
     .limit(limit)
     .execute();
   let list: ApkInfoRow[] = [];
