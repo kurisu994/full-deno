@@ -26,7 +26,7 @@ export default function Home(
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="/styles/kbtn-style.css" />
       </head>
-      <div class="mx-auto bg-blue-300 h-screen h-svh min-w-[320px] flex">
+      <div class="bg-[url('/img/steins_gate.png')] bg-cover h-screen h-svh min-w-[320px] flex">
         <div
           class="w-full min-w-[320px] flex justify-center items-center flex-col fixed z-10 pointer-events-none"
           aria-hidden="true"
@@ -35,10 +35,15 @@ export default function Home(
         </div>
 
         <div className="flex-1 flex flex-col max-w-screen-xl mx-auto">
-          <div className="relative pt-[15vh]">
-            <p class="text-3xl text-center mb-4">
-              测试包查询
-            </p>
+          <div className="relative pt-[15vh] text-center">
+            <img
+              class="inline-block mr-4"
+              alt="logo"
+              src="/img/patchouli.gif"
+            />
+            <span class="text-3xl text-center mb-4 font-serif">
+              不动的大图书馆
+            </span>
             <Search value={kw} datalist={appList} />
           </div>
           <Info datalist={appList} />

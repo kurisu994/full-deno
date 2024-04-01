@@ -10,7 +10,7 @@ const Info = ({ datalist }: InfoProps) => {
   return (
     <div class="relative overflow-y-auto scroll-smooth snap-y scrollbar-hide flex flex-col flex-1 items-center mt-5 mb-[75px] mx-auto w-4/5 sm:w-4/6 md:w-1/2">
       {datalist.value?.map?.((item) => (
-        <div class="snap-start select-none mb-6 shadow-md bg-neutral-100 border rounded-md border-transparent w-full p-4 duration-300 hover:shadow-lg focus:shadow-lg focus:outline-none flex md:flex-row flex-col">
+        <div class="snap-start select-none mb-6 shadow-md bg-neutral-100/90 border rounded-md border-transparent w-full p-4 duration-300 hover:shadow-lg focus:shadow-lg focus:outline-none flex md:flex-row flex-col">
           <div class="w-full">
             <p class="font-bold text-lg">{item.appName}</p>
             <p class="text-base mt-2">大小：{item.appSize}</p>
