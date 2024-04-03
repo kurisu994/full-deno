@@ -11,7 +11,8 @@
     "update": "deno run -A -r https://fresh.deno.dev/update .",
     "migrate": "deno run -A utils/db_migration.ts",
     "migrate_up": "deno run -A utils/db_migration.ts --up",
-    "migrate_down": "deno run -A utils/db_migration.ts --down"
+    "migrate_down": "deno run -A utils/db_migration.ts --down",
+    "preview": "deno run -A main.ts"
   },
   "lint": { "rules": { "tags": ["fresh", "recommended"] } },
   "exclude": ["**/_fresh/*"],
