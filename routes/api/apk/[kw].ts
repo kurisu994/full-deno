@@ -4,7 +4,7 @@ import { ApkInfoRow, queryByKw } from "@/utils/apkdao.ts";
 export const handler: Handlers<ApkInfoRow[] | null> = {
   async GET(_req, ctx) {
     const kw = ctx.params.kw;
-    const list = await queryByKw(kw);
+    const list = await queryByKw(kw, 1000);
     return Promise.resolve(
       new Response(JSON.stringify(list), {
         headers: { "Content-Type": "application/json" },
