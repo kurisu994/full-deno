@@ -14,7 +14,7 @@ export default function Error500Page({ error }: PageProps) {
             src="/logo.svg"
             width="128"
             height="128"
-            alt="the Fresh logo: a sliced lemon dripping with juice"
+            alt="the logo: a sliced lemon dripping with juice"
           />
           <h1 class="text-4xl font-bold">500 - Internal error</h1>
           <p class="my-4">
