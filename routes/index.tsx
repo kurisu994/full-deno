@@ -1,5 +1,5 @@
 import { useSignal } from "@preact/signals";
-import LemonDrop from "@/islands/LemonDrop.tsx";
+import WaterDrop from "@/islands/WaterDrop.tsx";
 import Search from "@/islands/Search.tsx";
 import Info from "@/islands/Info.tsx";
 import { Handlers, PageProps } from "$fresh/server.ts";
@@ -31,7 +31,7 @@ export default function Home(
           class="w-full min-w-[320px] flex justify-center items-center flex-col fixed z-10 pointer-events-none"
           aria-hidden="true"
         >
-          <LemonDrop />
+          <WaterDrop />
         </div>
 
         <div className="flex-1 flex flex-col max-w-screen-xl mx-auto">

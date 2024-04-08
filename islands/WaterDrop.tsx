@@ -8,7 +8,7 @@ function easeInCirc(x: number) {
 
 const waveTank = new WaveTank();
 
-function LemonDrop() {
+function WaterDrop() {
   const SVG_WIDTH = 100;
   const counter = useSignal(0);
   const dropy = useSignal(60);
@@ -143,4 +143,4 @@ function LemonDrop() {
   );
 }
 
-export default LemonDrop;
+export default WaterDrop;
