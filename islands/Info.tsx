@@ -1,12 +1,33 @@
 import dayjs from "dayjs";
 import { ApkInfoRow } from "@/utils/apkdao.ts";
 import { Signal } from "@preact/signals";
+import { useEffect } from "preact/hooks";
 
 interface InfoProps {
   datalist: Signal<ApkInfoRow[] | null>;
 }
 
 const Info = ({ datalist }: InfoProps) => {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.info(entry)
+        if (entry.isIntersecting) {
+          // 元素出现在视口中
+          console.log("元素出现在视口中");
+          // 停止观察
+          // observer.unobserve(entry.target);
+        }
+      });
+    });
+    // 选择需要观察的元素
+    const element = document.querySelector("#my-element");
+    console.info(element);
+    if (element) {
+      observer.observe(element);
+    }
+  }, []);
+
   return (
     <div class="relative overflow-y-auto scroll-smooth snap-y scrollbar-hide flex flex-col flex-1 items-center mt-5 mb-[75px] mx-auto w-4/5 sm:w-4/6 md:w-1/2">
       {datalist.value?.map?.((item) => (
@@ -34,6 +55,7 @@ const Info = ({ datalist }: InfoProps) => {
           </div>
         </div>
       ))}
+      <div id="my-element" class="w-full h-1" />
     </div>
   );
 };

@@ -21,6 +21,7 @@ export async function queryByKw(kw = "", limit = 10) {
       ])
     ).orderBy("upload_at asc")
     .limit(limit)
+    .offset(0)
     .execute();
   let list: ApkInfoRow[] = [];
   if (results) {
