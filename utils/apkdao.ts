@@ -19,7 +19,7 @@ export async function queryByKw(kw = "", limit = 10) {
         eb("fid", "=", kw),
         eb("app_name", "like", `%${kw}%`),
       ])
-    ).orderBy("upload_at asc")
+    ).orderBy("id desc")
     .limit(limit)
     .offset(0)
     .execute();
