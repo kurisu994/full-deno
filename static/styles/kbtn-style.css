@@ -84,7 +84,7 @@
 }
 
 #qr-code-dialog {
-  margin: 20% auto;
+  margin: 10rem auto auto;
   border-radius: 1.2rem;
   width: min-content;
   background-color: #fff;
