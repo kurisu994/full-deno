@@ -13,6 +13,7 @@ import * as $index from "./routes/index.tsx";
 import * as $patchouli_index from "./routes/patchouli/index.tsx";
 import * as $Counter from "./islands/Counter.tsx";
 import * as $Info from "./islands/Info.tsx";
+import * as $QrCodeGenerator from "./islands/QrCodeGenerator.tsx";
 import * as $Search from "./islands/Search.tsx";
 import * as $WaterDrop from "./islands/WaterDrop.tsx";
 import { type Manifest } from "$fresh/server.ts";
@@ -32,6 +33,7 @@ const manifest = {
   islands: {
     "./islands/Counter.tsx": $Counter,
     "./islands/Info.tsx": $Info,
+    "./islands/QrCodeGenerator.tsx": $QrCodeGenerator,
     "./islands/Search.tsx": $Search,
     "./islands/WaterDrop.tsx": $WaterDrop,
   },
