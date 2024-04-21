@@ -20,7 +20,7 @@ export default function Error500Page({ error }: PageProps) {
           <p class="my-4">
             500 Internal error: {(error as Error).message}
           </p>
-          <a href="/" class="underline">Go back home</a>
+          <a href="/" class="underline">回到首页</a>
         </div>
       </div>
     </>

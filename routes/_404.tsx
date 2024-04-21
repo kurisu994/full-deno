@@ -19,7 +19,7 @@ export default function Error404() {
           <p class="my-4">
             Sorry, the page you visited does not exist.
           </p>
-          <a href="/" class="underline">Go back home</a>
+          <a href="/" class="underline">回到首页</a>
         </div>
       </div>
     </>

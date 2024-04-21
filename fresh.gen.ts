@@ -15,6 +15,7 @@ import * as $Counter from "./islands/Counter.tsx";
 import * as $Info from "./islands/Info.tsx";
 import * as $QrCodeGenerator from "./islands/QrCodeGenerator.tsx";
 import * as $Search from "./islands/Search.tsx";
+import * as $ThemeProvider from "./islands/ThemeProvider.tsx";
 import * as $WaterDrop from "./islands/WaterDrop.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
@@ -35,6 +36,7 @@ const manifest = {
     "./islands/Info.tsx": $Info,
     "./islands/QrCodeGenerator.tsx": $QrCodeGenerator,
     "./islands/Search.tsx": $Search,
+    "./islands/ThemeProvider.tsx": $ThemeProvider,
     "./islands/WaterDrop.tsx": $WaterDrop,
   },
   baseUrl: import.meta.url,

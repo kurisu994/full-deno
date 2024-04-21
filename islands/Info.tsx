@@ -36,7 +36,6 @@ const Info = ({ datalist }: InfoProps) => {
     if (!url) {
       return;
     }
-
     setDownloadUrl(url);
     dialogRef?.current?.showModal?.();
   }

@@ -1,6 +1,7 @@
 import { type PageProps } from "$fresh/server.ts";
 import dayjs from "dayjs";
 import "dayjs/zhCN";
+import ThemeProvider from "@/islands/ThemeProvider.tsx";
 
 export default function App({ Component }: PageProps) {
   dayjs.locale("zh-cn");
@@ -13,7 +14,9 @@ export default function App({ Component }: PageProps) {
         <link rel="stylesheet" href="/styles.css" />
       </head>
       <body>
-        <Component />
+        <ThemeProvider>
+          <Component />
+        </ThemeProvider>
       </body>
     </html>
   );

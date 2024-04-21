@@ -26,7 +26,7 @@ export default function Home(
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="/styles/kbtn-style.css" />
       </head>
-      <div class="bg-[url('/img/steins_gate.png')] bg-cover h-screen h-svh min-w-[320px] flex">
+      <div class="dark:brightness-50 bg-[url('/img/steins_gate.png')] bg-cover h-screen h-svh min-w-[320px] flex">
         <div
           class="w-full min-w-[320px] flex justify-center items-center flex-col fixed z-10 pointer-events-none"
           aria-hidden="true"
