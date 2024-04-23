@@ -51,6 +51,10 @@
   color: rgba(251, 75, 2, 1);
   background: transparent;
 }
+.dark .kbtn:hover {
+  color: #ffffff;
+  background: #252525;
+}
 .kbtn:hover:before {
   height: 100%;
 }
@@ -87,17 +91,13 @@
   margin: 10rem auto auto;
   border-radius: 1.2rem;
   width: min-content;
-  background-color: #fff;
   padding: 1.2rem 1.2rem 1.5rem;
-  box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.0476518);
   user-select: none;
 }
 
 .qr-code {
   width: 18rem;
   height: 18rem;
-  background-repeat: no-repeat;
-  background-image: url("/img/qrcode/qr-code-bg.svg");
   margin-bottom: 1.4rem;
   display: flex;
   align-items: center;

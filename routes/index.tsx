@@ -4,6 +4,7 @@ import Search from "@/islands/Search.tsx";
 import Info from "@/islands/Info.tsx";
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { ApkInfoRow, queryByKw } from "@/utils/apkdao.ts";
+import { Head, IS_BROWSER } from "$fresh/runtime.ts";
 
 export const handler: Handlers<ApkInfoRow[] | null> = {
   async GET(_, ctx) {
@@ -18,15 +19,14 @@ export default function Home(
 ) {
   const kw = url.searchParams.get("kw");
   const appList = useSignal(data);
-
   return (
     <>
-      <head>
+      <Head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="/styles/kbtn-style.css" />
-      </head>
-      <div class="dark:brightness-50 bg-[url('/img/steins_gate.png')] bg-cover h-screen h-svh min-w-[320px] flex">
+      </Head>
+      <div class="bg-[url('/img/steins_gate.png')] bg-cover h-screen h-svh min-w-[320px] flex dark:bg-slate-900 dark:bg-none dark:text-slate-200">
         <div
           class="w-full min-w-[320px] flex justify-center items-center flex-col fixed z-10 pointer-events-none"
           aria-hidden="true"

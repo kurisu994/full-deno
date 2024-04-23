@@ -4,7 +4,7 @@ import { IS_BROWSER } from "$fresh/runtime.ts";
 const ThemeProvider = (
   { children }: JSX.HTMLAttributes<HTMLButtonElement>,
 ) => {
-  const handThemeChange = (e: any) => {
+  const handThemeChange = (e: MediaQueryListEvent) => {
     if (e.matches) {
       document.documentElement.classList.add("dark");
     } else {

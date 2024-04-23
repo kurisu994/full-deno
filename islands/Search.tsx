@@ -45,11 +45,11 @@ const Search = ({ value, datalist }: Props) => {
           value={query ? query : ""}
           onChange={(e) => setQuery((e.target as HTMLInputElement).value)}
           onKeyPress={(e) => handleKeyPress(e)}
-          class="p-2 flex-1  border-2 border-yellow-300 rounded-md text-lg text-center duration-300 focus:outline-none focus:border-yellow-400"
+          class="p-2 flex-1 bg-white border-2 border-yellow-300 rounded-md text-lg text-center duration-300 focus:outline-none focus:border-yellow-400 dark:bg-slate-950 dark:border-neutral-500 dark:focus:border-neutral-400"
         />
         <button
           onClick={search}
-          className="custom-btn kbtn ml-4"
+          className="custom-btn kbtn ml-4 brightness-90"
           disabled={!IS_BROWSER}
         >
           <span>搜索</span>

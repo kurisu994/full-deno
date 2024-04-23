@@ -43,12 +43,12 @@ const Info = ({ datalist }: InfoProps) => {
   return (
     <div class="relative overflow-y-auto scroll-smooth scrollbar-hide flex flex-col flex-1 items-center mt-5 mb-[70px] mx-auto w-4/5 sm:w-4/6 md:w-1/2">
       {datalist.value?.map?.((item) => (
-        <div class="select-none mb-6 shadow-md bg-neutral-100/90 border rounded-md border-transparent w-full p-4 duration-300 hover:shadow-lg focus:shadow-lg focus:outline-none flex md:flex-row flex-col">
+        <div class="select-none mb-6 shadow-md bg-neutral-100/90 border rounded-md border-transparent w-full p-4 duration-300 hover:shadow-lg focus:shadow-lg focus:outline-none flex md:flex-row flex-col dark:bg-gray-800">
           <div class="w-full">
             <p class="font-bold text-lg">{item.appName}</p>
             <p class="text-base mt-2">大小：{item.appSize}</p>
             <p class="text-base mt-2">
-              md5：<span class="font-mono select-text bg-blue-200 rounded py-px px-[5px] break-all">
+              md5：<span class="font-mono select-text bg-blue-200 rounded py-px px-[5px] break-all dark:bg-zinc-950">
                 {item.md5}
               </span>
             </p>
@@ -78,17 +78,21 @@ const Info = ({ datalist }: InfoProps) => {
         id="qr-code-dialog"
         // @ts-ignore
         ref={dialogRef}
+        class="shadow-wl bg-white dark:bg-stone-800 dark:shadow-dl"
         onClick={() => dialogRef?.current?.close?.()}
       >
-        <div class="qr-code" onClick={(e) => e.stopPropagation()}>
+        <div
+          class="qr-code bg-[url('/img/qrcode/qr-code-bg.svg')] dark:bg-none dark:brightness-[0.85]"
+          onClick={(e) => e.stopPropagation()}
+        >
           <QrCodeGenerator url={downloadUrl} />
         </div>
         <div
           class="flex text-center flex-col gap-2"
           onClick={(e) => e.stopPropagation()}
         >
-          <h2 class="text-lg font-bold">扫码下载</h2>
-          <p class="text-[#666666] text-sm">
+          <h2 class="text-lg font-bold dark:text-gray-400">扫码下载</h2>
+          <p class="text-[#666666] text-sm  dark:text-[#999]">
             扫描二维码下载下载安装包
           </p>
         </div>
