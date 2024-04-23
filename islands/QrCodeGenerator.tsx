@@ -30,7 +30,6 @@ const QrCodeGenerator = ({
     }
   }, [url]);
 
-
   return (IS_BROWSER
     ? (
       <div
