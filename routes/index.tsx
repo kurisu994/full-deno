@@ -4,7 +4,7 @@ import Search from "@/islands/Search.tsx";
 import Info from "@/islands/Info.tsx";
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { ApkInfoRow, queryByKw } from "@/utils/apkdao.ts";
-import { Head, IS_BROWSER } from "$fresh/runtime.ts";
+import { Head } from "$fresh/runtime.ts";
 
 export const handler: Handlers<ApkInfoRow[] | null> = {
   async GET(_, ctx) {

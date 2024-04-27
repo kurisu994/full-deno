@@ -1,4 +1,3 @@
-// deno-lint-ignore-file ban-ts-comment
 import dayjs from "dayjs";
 import { ApkInfoRow } from "@/utils/apkdao.ts";
 import { Signal } from "@preact/signals";
@@ -76,7 +75,7 @@ const Info = ({ datalist }: InfoProps) => {
       </div>
       <dialog
         id="qr-code-dialog"
-        // @ts-ignore
+        // @ts-ignore ignore
         ref={dialogRef}
         class="shadow-wl bg-white dark:bg-stone-800 dark:shadow-dl"
         onClick={() => dialogRef?.current?.close?.()}
