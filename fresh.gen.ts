@@ -11,7 +11,6 @@ import * as $api_apk_remove from "./routes/api/apk/remove.ts";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
 import * as $patchouli_index from "./routes/patchouli/index.tsx";
-import * as $Counter from "./islands/Counter.tsx";
 import * as $Info from "./islands/Info.tsx";
 import * as $QrCodeGenerator from "./islands/QrCodeGenerator.tsx";
 import * as $Search from "./islands/Search.tsx";
@@ -32,7 +31,6 @@ const manifest = {
     "./routes/patchouli/index.tsx": $patchouli_index,
   },
   islands: {
-    "./islands/Counter.tsx": $Counter,
     "./islands/Info.tsx": $Info,
     "./islands/QrCodeGenerator.tsx": $QrCodeGenerator,
     "./islands/Search.tsx": $Search,
