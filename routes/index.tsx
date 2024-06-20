@@ -48,6 +48,11 @@ export default function Home(
           </div>
           <Info datalist={appList} />
         </div>
+
+        <div className="fixed right-0 top-1 px-3">
+          <a className="mx-1 text-xs text-blue-600 cursor-pointer uda" target="_blank" href={`https://portal.feewee.cn/apply/download?k=88b0efa9&_s=${Date.now()}`} >银川环境APP</a>
+          <a className="mx-1 text-xs text-blue-600 cursor-pointer ud" target="_blank" href={`https://ultraportal.feewee.cn/apply/download?k=SErccqRT&_s=${Date.now()}`} >正式环境APP</a>
+        </div>
       </div>
     </>
   );

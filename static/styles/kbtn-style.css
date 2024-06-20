@@ -103,3 +103,31 @@
   align-items: center;
   justify-content: center;
 }
+
+
+.uda {
+  position: relative; /* 为伪元素定位做准备 */
+  display: inline-block; /* 确保只有文本内容受伪元素影响 */
+}
+
+/* 创建一个伪元素作为下划线 */
+.uda::after {
+  content: ''; /* 伪元素无内容 */
+  position: absolute; /* 绝对定位 */
+  bottom: -4px; /* 下划线位于文本底部 */
+  left: 0; /* 开始时下划线在最左侧 */
+  width: 0%; /* 初始宽度为0 */
+  height: 1px; /* 下划线高度 */
+  background-color: currentColor; /* 使用文本颜色作为下划线颜色 */
+  transition: width 0.3s ease; /* 宽度变化的过渡效果 */
+}
+
+/* 鼠标悬停时下划线动画 */
+.uda:hover::after {
+  width: 100%; /* 悬停时下划线宽度变为100% */
+}
+
+/* 可选：如果需要在移出时有反向动画，可以通过设置不同的transition-timing-function实现不同效果 */
+.uda:hover::after {
+  transition: width 0.3s ease-out; /* 或其他timing-function以改变动画速度曲线 */
+}
