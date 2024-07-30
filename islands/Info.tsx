@@ -29,6 +29,12 @@ const Info = ({ datalist }: InfoProps) => {
     if (element) {
       observer.observe(element);
     }
+
+    return () => {
+      if (element) {
+        observer.unobserve(element);
+      }
+    };
   }, []);
 
   function showDialog(url = "") {
