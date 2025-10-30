@@ -28,6 +28,9 @@ echo "===== 拉取最新代码 ====="
 git pull --rebase
 
 # 2. 初始化QEMU模拟器（支持跨架构构建）
+echo -e "\n===== 删除现有构建器 ====="
+docker buildx rm multiarch-builder
+
 echo -e "\n===== 初始化跨架构模拟器 ====="
 docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
 
