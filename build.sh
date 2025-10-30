@@ -19,7 +19,6 @@ ARCHITECTURES=(
   "linux/arm64"
   "linux/arm/v7"
   "linux/arm/v6"
-  "linux/s390x"
 )
 
 # 1. 拉取最新代码
