@@ -17,8 +17,6 @@ REGISTRY="docker.io/${USERNAME}"
 ARCHITECTURES=(
   "linux/amd64"
   "linux/arm64"
-  "linux/arm/v7"
-  "linux/arm/v6"
 )
 
 # 1. 拉取最新代码
