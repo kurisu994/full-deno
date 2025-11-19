@@ -68,5 +68,5 @@ jobs:
           COSIGN_EXPERIMENTAL: 1
         run: |
           DIGEST="${{ steps.build-and-push.outputs.digest }}"
-          IMAGE="${{ github.repository }}@${DIGEST}"
+          IMAGE="kurisu003/full-deno@${DIGEST}"
           cosign sign --yes "${IMAGE}"
