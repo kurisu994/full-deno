@@ -39,7 +39,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ github.repository }}
+          images: kurisu003/full-deno
           tags: |
             type=ref,event=branch
             type=ref,event=pr
